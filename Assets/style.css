@@ -1,0 +1,207 @@
+body {
+  display: block;
+}
+#brandlogo {
+  margin-left:400px ;
+  width: 100px;
+  height: 40px;
+}
+#brandlogo:hover{
+  transform: scale(1.03);
+} 
+#location {
+  padding-left: 10px;
+}
+#searchbar {
+  width: 500px;
+  margin-top: 12px;
+}
+#icons {
+  margin-left: 20px;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: 50;
+}
+/* Breadcrumb  */
+.breadcrumb {
+  margin-left: 20%;
+  text-decoration: none;
+}
+.breadcrumb-item{
+  font-size: 0.9rem;
+}
+.bclinks {
+  text-decoration: none;
+  color: grey;
+}
+.bclinksactive {
+  text-decoration: none;
+  color: #80808085;
+}
+
+#filterclass {
+  position: relative;
+  margin-left: 20%;
+  margin-top: 10px;
+}
+#modal-content{
+  width: 600px;
+}
+#tablist{
+  float: left;
+  display: block;
+  font-size: larger;
+}
+.navlink {
+  color: gray;
+}
+.navs {
+  height: 65px;
+}
+#tabcontent {
+  padding: 11px;
+  margin-left: 170px;
+  font-size: larger;
+  margin-top: -50px;
+}
+#Cuisine {
+  float: left;
+}
+#Cuisinecontent {
+  float: right;
+}
+/* owl crousel one  */
+#Catageories {
+  background-color: rgb(248, 248, 248);
+  margin-top: 10px;
+}
+#Catageories > h2 {
+margin-left: 20%;
+padding: 20px;
+}
+.owl1content{
+  margin-left: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+#Catageories img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%; 
+  cursor: pointer; 
+}
+.dishs figcaption {
+  text-align: center;
+}
+.dishs {
+  display: flex;
+  margin-left: 20%;
+ 
+}
+/* owl crousel two  */
+#topbrands > h2 {
+  margin-left: 20%;
+  margin-top: 10px;
+  padding: 20px;
+}
+.owl2content {
+  margin-left: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+}
+#topbrands img {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  cursor: pointer; 
+}
+.brands figcaption {
+  text-align: center;
+}
+.brands {
+  display: flex;
+  margin-left: 20%;
+}
+/* main content  */
+.contentcontainer1 {
+  margin-top: 10px;
+  margin-left: 20%;
+  display:inline-block;
+  width: 80%;
+}
+.contcard {
+  cursor:pointer;
+  width: 25%;
+  height: 350px;
+  float: left;
+  margin-left:25px;
+  margin-top: 20px;
+  line-height: 1;
+}
+.contcard:hover {
+  transform: scale(1.04);
+}
+
+.contbody {
+  height: 20%;
+  margin-top: -5px;
+}
+.contimg {
+  height: 240px;
+  padding: 5px;
+}
+.pricetag{
+  float: right;
+}
+
+/* footer  */
+footer {
+  margin-top: 20px;
+  background-color: rgb(248, 248, 248);
+}
+.brandlogo {
+  margin-left:210px ;
+  margin-top: 5px;
+  width: 100px;
+  height: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.brandlogo:hover{
+  transform: scale(1.03);
+}
+.linkpart {
+  height:200px;
+  margin-top: 20px;
+}
+.links {
+  text-decoration: none;
+  color:gray;
+}
+.linkpart a {
+  text-decoration: none;
+  display: block;
+  line-height: 1.5;
+  color: grey;
+}
+.linkpart h6 {
+  font-size: 17px;
+}
+.forthheading {
+  margin-top: 20px;
+}
+.firstrow {
+  position: absolute;
+  margin-left: 22%;
+}
+.Secondrow {
+  position: absolute;
+  margin-left: 35%;
+}
+.thirdrow {
+  position: absolute;
+  margin-left: 48%;
+}
+.fourthrow {
+  position: absolute;
+  margin-left: 65%;
+}

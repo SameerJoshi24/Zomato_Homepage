@@ -1,0 +1,450 @@
+<html>
+
+<head>
+  <title>Zomato</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link href="Assets/style.css" rel="stylesheet">
+  <link href="https://i.ibb.co/FWBHFwN/Zomato-logo.png" rel="icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt="Brandlogo"
+              id="brandlogo">
+          </a>
+        </div>
+      </nav>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0" id="Navbaroptions">
+          <li class="nav-item dropdown">
+            <a id="location" class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Select your location
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Banglore</a></li>
+              <li><a class="dropdown-item" href="#">Shivmogga</a></li>
+              <li><a class="dropdown-item" href="#">Hubli</a></li>
+              <li><a class="dropdown-item" href="#">Dharwar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">More </a></li>
+            </ul>
+          </li>
+        </ul>
+        <form id="searchbar" class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button id="searchbutton" class="btn btn-outline-warning" type="button">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+        <div id="icons">
+          <!-- Button trigger modal login -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#Modal1">
+            <i class="bi bi-box-arrow-in-right">Log in</i>
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="Modal1" tabindex="-1" aria-labelledby="ModalLabel1" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="ModalLabel1">Log in</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="InputPhonenumber" class="form-label">Phone no.</label>
+                      <input type="tel" class="form-control" id="InputPhonenumber">
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                      <button type="submit" class="btn btn-danger">Send one time password</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Button trigger modal Sign up -->
+          <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#Modal2">
+            <i class="bi bi-person-fill">Sign up</i>
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="Modal2" tabindex="-1" aria-labelledby="ModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="ModalLabel2">Sign up</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="Inputname" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="Inputname">
+                    </div>
+                    <div class="mb-3">
+                      <label for="InputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="Check1">
+                      <label class="form-check-label" for="Check1">
+                        I agree to Zomato's Terms of Service, Privacy Policy and Content Policies</label>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                      <button type="submit" class="btn btn-secondary" disabled>Create account</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- bread crumb  -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a class="bclinks" href="#">Home</a></li>
+      <li class="breadcrumb-item"><a class="bclinks" href="#">India</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><a class="bclinksactive" href="#"> Banglore Restaurants</a></li>
+    </ol>
+  </nav>
+  <!-- Button trigger modal -->
+  <div id="filterclass">
+    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#Modal3">
+      <i class="bi bi-filter">Filter</i>
+    </button>
+    <!-- Modal -->
+    <div class="modal fade" id="Modal3" tabindex="-1" aria-labelledby="ModalLabel3" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div id="modal-content" class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="eModalLabel3">Filter</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-content">
+              <div class="container mt-3">
+                Sort by
+                <br>
+                <!-- Nav tabs -->
+                <ul id="tablist" class="nav nav-tabs" role="tablist">
+                  <li class="nav-item avtive navs">
+                    <a class="nav-link navlink" data-bs-toggle="tab" href="#home">Popularity</a>
+                  </li>
+                  <li class="nav-item navs">
+                    <a class="nav-link navlink" data-bs-toggle="tab" href="#menu1">Cuisine Filter</a>
+                  </li>
+                  <li class="nav-item navs">
+                    <a class="nav-link navlink" data-bs-toggle="tab" href="#menu2">Rating</a>
+                  </li>
+                  <li class="nav-item navs">
+                    <a class="nav-link navlink" data-bs-toggle="tab" href="#menu3">Cost per person</a>
+                  </li>
+                  <li class="nav-item navs">
+                    <a class="nav-link navlink" data-bs-toggle="tab" href="#menu4">More filter</a>
+                  </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div id="tabcontent" class="tab-content">
+                  <div id="home" class="container tab-pane "><br>
+                    <p><input type="radio" name="Popularity" value="choice 1" />Popularity</p>
+                    <p><input type="radio" name="Popularity" value="choice 2" />Rating: High to Low</p>
+                    <p><input type="radio" name="Popularity" value="choice 3" />Delivery Time</p>
+                    <p><input type="radio" name="Popularity" value="choice 4" />Cost: Low to High</p>
+                    <p><input type="radio" name="Popularity" value="choice 5" />Cost: High to Low</p>
+                  </div>
+                  <div id="menu1" class="container tab-pane fade"><br>
+                    <p><input type="radio" name="Cuisine Filter" value="choice 1" />South indian</p>
+                    <p><input type="radio" name="Cuisine Filter" value="choice 2" />North indian</p>
+                    <p><input type="radio" name="Cuisine Filter" value="choice 3" />American</p>
+                    <p><input type="radio" name="Cuisine Filter" value="choice 4" />Chines</p>
+                    <p><input type="radio" name="Cuisine Filter" value="choice 5" />Fast food</p>
+                  </div>
+                  <div id="menu2" class="container tab-pane fade"><br>
+                    <p><input type="checkbox" name="Rating" value="choice 1" />Any</p>
+                    <p><input type="checkbox" name="Rating" value="choice 2" />3.5</p>
+                    <p><input type="checkbox" name="Rating" value="choice 3" />4.0</p>
+                    <p><input type="checkbox" name="Rating" value="choice 4" />4.5</p>
+                    <p><input type="checkbox" name="Rating" value="choice 5" />5.0</p>
+                  </div>
+                  <div id="menu3" class="container tab-pane fade"><br>
+                    <p><input type="radio" name="Cost" value="choice 1" />0-100</p>
+                    <p><input type="radio" name="Cost" value="choice 2" />100-300</p>
+                    <p><input type="radio" name="Cost" value="choice 3" />300-500</p>
+                    <p><input type="radio" name="Cost" value="choice 4" />500-800</p>
+                    <p><input type="radio" name="Cost" value="choice 5" />800-1000</p>
+                  </div>
+                  <div id="menu4" class="container tab-pane fade"><br>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <p><input type="radio" name="Cuisine Filter" value="choice 5" />Great offers</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Clear all</button>
+            <button type="button" class="btn btn-danger">Apply</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button type="button" class="btn btn-outline-secondary">
+      Rating:4.0+
+    </button>
+    <button type="button" class="btn btn-outline-secondary">
+      Pure veg
+    </button>
+    <button type="button" class="btn btn-outline-secondary">
+      Cuisines
+    </button>
+    <button type="button" class="btn btn-outline-secondary">
+      More filters
+    </button>
+  </div>
+  <!-- owl crousel one  -->
+  <div id="Catageories">
+    <h2>Inspiration for your first order</h2>
+    <div class="dishs">
+      <figure class="owl1content">
+        <img src="https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png" alt="dishs"
+          class="dish1img">
+        <figcaption>Biryani</figcaption>
+      </figure>
+      <figure class="owl1content">
+        <img src="https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png" alt="dishs"
+          class="dish2img">
+        <figcaption>Pizza</figcaption>
+      </figure>
+      <figure class="owl1content">
+        <img src="https://b.zmtcdn.com/data/dish_images/c2f22c42f7ba90d81440a88449f4e5891634806087.png" alt="dishs"
+          class="dish3img">
+        <figcaption>Rolls</figcaption>
+      </figure>
+      <figure class="owl1content">
+        <img src="https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png" alt="dishs"
+          class="dish4img">
+        <figcaption>Dosa</figcaption>
+      </figure>
+      <figure class="owl1content">
+        <img src="https://b.zmtcdn.com/data/o2_assets/52eb9796bb9bcf0eba64c643349e97211634401116.png" alt="dishs"
+          class="dish5img">
+        <figcaption>Thali</figcaption>
+      </figure>
+      <figure class="owl1content">
+        <img src="https://b.zmtcdn.com/data/o2_assets/e444ade83eb22360b6ca79e6e777955f1632716661.png" alt="dishs"
+          class="dish6img">
+        <figcaption>Fride rice</figcaption>
+      </figure>
+    </div>
+  </div>
+  <!-- owl crousel two  -->
+  <div id="topbrands">
+    <h2>Top brands for you</h2>
+    <div class="brands">
+      <figure class="owl2content">
+        <img
+          src="https://b.zmtcdn.com/data/brand_creatives/logos/1a985408ca7ad8fd097f2c47db9c5cb6_1611252598.png?output-format=webp"
+          alt="brand" class="brand1img">
+        <figcaption>Domino's pizza</figcaption>
+      </figure>
+      <figure class="owl2content">
+        <img
+          src="https://b.zmtcdn.com/data/brand_creatives/logos/acc68e452e5e8ea16d56292838cd0056_1659429766.png?output-format=webp"
+          alt="brand" class="brand2img">
+        <figcaption>Eatfit</figcaption>
+      </figure>
+      <figure class="owl2content">
+        <img
+          src="https://b.zmtcdn.com/data/brand_creatives/logos/e233fa61fd1dfc0147109bd4eb0bd315_1513746862.png?output-format=webp"
+          alt="brand" class="brand3img">
+        <figcaption>chai point</figcaption>
+      </figure>
+      <figure class="owl2content">
+        <img
+          src="https://b.zmtcdn.com/data/brand_creatives/logos/6a11fd0f30c9fd9ceaff2f5b21f61d23_1617187721.png?output-format=webp"
+          alt="brand" class="brand4img">
+        <figcaption>Burger king</figcaption>
+      </figure>
+      <figure class="owl2content">
+        <img
+          src="https://b.zmtcdn.com/data/brand_creatives/logos/5ef673b417cd25b5a04176ce341d425a_1630505477.png?output-format=webp"
+          alt="brand" class="brand5img">
+        <figcaption>A2B</figcaption>
+      </figure>
+      <figure class="owl2content">
+        <img
+          src="https://b.zmtcdn.com/data/brand_creatives/logos/80c09d718acddee05a655eb378bb442f_1617875125.png?output-format=webp"
+          alt="brand" class="brand6img">
+        <figcaption>KFC</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Main content  -->
+  <div class="container contentcontainer1">
+    <h2>Best food in your city</h2>
+    <div class="card contcard">
+      <img
+        src="https://b.zmtcdn.com/data/pictures/2/18244312/7354cfdc5b40c93dde4826c1f8623b69_o2_featured_v2.jpg?output-format=webp"
+        class="card-img-top contimg" alt="content">
+      <div class="card-body contbody">
+        <h5 class="card-title">Ayodha upachar</h5>
+        <p class="card-text">South Indian, North indian, Chinese</p>
+        <p class="pricetag">₹100 for one</p>
+      </div>
+    </div>
+    <div class="card contcard">
+      <img
+        src="https://b.zmtcdn.com/data/pictures/6/18160106/4cc8147678cbd736146e9c9fc74b9686_o2_featured_v2.jpg?output-format=webp"
+        class="card-img-top contimg" alt="content">
+      <div class="card-body contbody">
+        <h5 class="card-title">Hotel aditya</h5>
+        <p class="card-text">Biryani, South Indian, Mughlai</p>
+        <p class="pricetag">₹200 for one</p>
+      </div>
+    </div>
+    <div class="card contcard">
+      <img
+        src="https://b.zmtcdn.com/data/pictures/chains/5/60205/343a6226d16a3e5976b0994c254b12ce_o2_featured_v2.jpg?output-format=webp"
+        class="card-img-top contimg" alt="content">
+      <div class="card-body contbody">
+        <h5 class="card-title">Hotel Revoli Inn</h5>
+        <p class="card-text">Chinese, North Indian, Mughlai</p>
+        <p class="pricetag">₹200 for one</p>
+      </div>
+    </div>
+    <div class="card contcard">
+      <img
+        src="https://b.zmtcdn.com/data/pictures/chains/4/50674/a153257d68de3a60406ac31c98f39ccc_o2_featured_v2.jpg?output-format=webp"
+        class="card-img-top contimg" alt="content">
+      <div class="card-body contbody">
+        <h5 class="card-title">McDonald's</h5>
+        <p class="card-text">Burger, Fast Food</p>
+        <p class="pricetag">₹200 for one</p>
+      </div>
+    </div>
+    <div class="card contcard">
+      <img
+        src="https://b.zmtcdn.com/data/pictures/chains/5/61555/6d8f0bd28dab85b3e5e858642c6ee645_o2_featured_v2.jpg?output-format=webp"
+        class="card-img-top contimg" alt="content">
+      <div class="card-body contbody">
+        <h5 class="card-title">Burger King</h5>
+        <p class="card-text">Burger, Fast Food, Desserts, Beverages</p>
+        <p class="pricetag">₹200 for one</p>
+      </div>
+    </div>
+    <div class="card contcard">
+      <img
+        src="https://b.zmtcdn.com/data/pictures/chains/2/50382/e8cf1c58f2bb217f3d85ff50b7fe39a3_o2_featured_v2.jpg?output-format=webp"
+        class="card-img-top contimg" alt="content">
+      <div class="card-body contbody">
+        <h5 class="card-title">Domino's Pizza</h5>
+        <p class="card-text">Pizza, Italian, Pasta, Fast Food, Desserts</p>
+        <p class="pricetag">₹150 for one</p>
+      </div>
+    </div>
+    <div class="card contcard">
+      <img src="https://b.zmtcdn.com/data/pictures/chains/8/51418/5e5a724a228b8aac9e0fbf88503b1a70_o2_featured_v2.jpg"
+        class="card-img-top contimg" alt="content">
+      <div class="card-body contbody">
+        <h5 class="card-title">Pizza Hut</h5>
+        <p class="card-text">Pizza, Fast Food, Desserts, Beverages</p>
+        <p class="pricetag">₹150 for one</p>
+      </div>
+    </div>
+    <div class="card contcard">
+      <img src="https://b.zmtcdn.com/data/pictures/chains/1/50011/fb214a9bcdf4c698bbb6c51261e0ad58_o2_featured_v2.jpg"
+        class="card-img-top contimg" alt="content">
+      <div class="card-body contbody">
+        <h5 class="card-title">A2B - Adyar Ananda Bhavanr</h5>
+        <p class="card-text">South Indian, Street Food, North Indian, Chinese, Fast Food, Beverages, Desserts</p>
+        <p class="pricetag">₹150 for one</p>
+      </div>
+    </div>
+    <div class="card contcard">
+      <img src="https://b.zmtcdn.com/data/pictures/0/50550/ca6d0ee9c1e3beed7cd861919dbc9972_o2_featured_v2.jpg"
+        class="card-img-top contimg" alt="content">
+      <div class="card-body contbody">
+        <h5 class="card-title">Kanti Sweets</h5>
+        <p class="card-text">Mithai, Desserts, Street Food</p>
+        <p class="pricetag">₹100 for one</p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer  -->
+  <footer>
+    <div class="brandlogo">
+      <a href="https://sameerjoshi24.github.io/Zomato_project/">
+        <img src=" https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt="logo"
+          class="brandlogo">
+      </a>
+    </div>
+    <div class="linkpart">
+      <div class="firstrow">
+        <h6>ABOUT ZOMATO</h6>
+        <a href="#">About Us</a>
+        <a href="#">Blog</a>
+        <a href="#">Work With Us</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Report Fraud</a>
+        <a href="#">Contact Us</a>
+        <a href="#"></a>
+      </div>
+      <div class="Secondrow">
+        <h6>ZOMAVERSE</h6>
+        <a href="#">Zomato</a>
+        <a href="#">Blinkit</a>
+        <a href="#">Feeding India</a>
+        <a href="#">Hyperpure</a>
+        <a href="#">Zomaland</a>
+      </div>
+      <div class="thirdrow">
+        <h6>FOR RESTAURANTS</h6>
+        <a href="#">Partner With Us</a>
+        <a href="#">Apps For You</a>
+        <h6 class="forthheading">FOR ENTERPRISES</h6>
+        <a href="#">Zomato For Enterprise</a>
+      </div>
+      <div class="fourthrow">
+        <h6>LEARN MORE</h6>
+        <a href="#">Privacy</a>
+        <a href="#">Security</a>
+        <a href="#">Terms</a>
+        <a href="#">Sitemap</a>
+        <a href="#">Amazon App Download</a>
+        <a href="#">Help</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
